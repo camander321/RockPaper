@@ -47,7 +47,7 @@ namespace RockPaper.Models.Tests
         string result = newGame.GetWinner();
 
         //Assert
-        Assert.AreEqual("Player 1", result);
+        Assert.AreEqual("Player 1 Wins!", result);
 
     }
 

@@ -1,3 +1,39 @@
 body {
-  background-color: lightgray;
+  background-image: url("../img/arena.gif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.radio {
+  text-align: left;
+}
+
+.well {
+  background-color: rgba(200, 200, 200, 0.7);
+  border-width: 0px;
+}
+
+#player1-img {
+  width: 349px;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 350px;
+}
+
+#player2-img {
+  width: 349px;
+  height: auto;
+  position: fixed;
+  right: 0;
+  top: 350px;
+
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }

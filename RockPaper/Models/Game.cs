@@ -33,15 +33,15 @@ namespace RockPaper.Models
       {
           if (_player1 == _player2)
           {
-            _winner = "Draw";
+            _winner = "Draw!";
           }
           else if ((_player1 + 1) % 3 == _player2)
           {
-            _winner = "Player 2";
+            _winner = "Player 2 Wins!";
           }
           else
           {
-            _winner = "Player 1";
+            _winner = "Player 1 Wins!";
           }
       }
   }
