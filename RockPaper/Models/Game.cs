@@ -23,5 +23,26 @@ namespace RockPaper.Models
       {
           return _player2;
       }
+
+      public string GetWinner()
+      {
+        return _winner;
+      }
+
+      public void CalculateWinner()
+      {
+          if (_player1 == _player2)
+          {
+            _winner = "Draw";
+          }
+          else if ((_player1 + 1) % 3 == _player2)
+          {
+            _winner = "Player 2";
+          }
+          else
+          {
+            _winner = "Player 1";
+          }
+      }
   }
 }
