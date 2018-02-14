@@ -44,3 +44,7 @@ body {
   left: 50%;
   margin-left: -175px;
 }
+
+#human, #computer, #hidden {
+  display: none;
+}

@@ -21,13 +21,22 @@ function splode() {
 		clearInterval(id);
     $(".splode").attr("src", "");
     $(".splode").remove();
-    $(".loser").fadeOut();
+    $(".loser").delay(400).fadeOut();
 	}
 }
-
-
 
 $(document).ready(function(){
   finishHim();
   splode();
+
+  $("#humanButton").click(function() {
+    $("#human").show();
+    $("#computer").show();
+  });
+
+  $("#computerButton").click(function() {
+    $("#human").show();
+    $("#computer").hide();
+    $("input:radio[name=player2]:checked").val("3");
+  });
 });

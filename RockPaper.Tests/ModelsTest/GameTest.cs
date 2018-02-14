@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using RockPaper.Models;
 
 namespace RockPaper.Models.Tests
@@ -49,6 +50,39 @@ namespace RockPaper.Models.Tests
         //Assert
         Assert.AreEqual("Player 1 Wins!", result);
 
+    }
+
+    [TestMethod]
+    public void ComputerGameInput_ReturnOutput()
+    {
+        //Arrange
+        int player1Input = 0;
+        Random rand1 = new Random();
+
+        //Act
+        int computer = rand1.Next(3);
+        Game newGame = new Game(player1Input, computer);
+
+        //Assert
+        Assert.AreEqual(newGame.GetPlayer2(), computer);
+    }
+
+    [TestMethod]
+    public void ComputerDetermineWinner_ReturnWinner()
+    {
+        //Arrange
+        int player1Input = 0;
+        Random rand1 = new Random();
+        int computer = 1;
+        Game newGame = new Game(player1Input, computer);
+
+        //Act
+        newGame.SetComputer(true);
+        newGame.CalculateWinner();
+        string result = newGame.GetWinner();
+
+        //Assert
+        Assert.AreEqual(result, "Computer Wins!");
     }
 
   }

@@ -48,6 +48,19 @@ A game about rocks papers and scissors.
 - example input: winner = Player1
 - example output: Player1 Wins!
 
+* User can go against a computer opponent
+- example input: user clicks on Computer Opponent
+- example output: user is directed to a page to fight Computer
+
+* User clicks Go! on computer opponent page, computer randomly chooses rock, paper, or scissors
+- example input: user clicks Go!
+- example output: Computer chooses paper at random
+
+* Game determines who wins based on player and computer input
+- example input: Player: Rock, Computer: Paper
+- example output: Computer Wins!
+
+
 ## Setup/Installation Requirements
 
 * Clone the git repository from 'https://github.com/camander321/LeapYearTest.git'.

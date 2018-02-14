@@ -7,6 +7,7 @@ namespace RockPaper.Models
       private int _player1;
       private int _player2;
       private string _winner;
+      private bool _computer;
 
       public Game(int player1, int player2)
       {
@@ -26,7 +27,12 @@ namespace RockPaper.Models
 
       public string GetWinner()
       {
-        return _winner;
+          return _winner;
+      }
+
+      public void SetComputer(bool isComputer)
+      {
+          _computer = isComputer;
       }
 
       public void CalculateWinner()
@@ -37,7 +43,14 @@ namespace RockPaper.Models
           }
           else if ((_player1 + 1) % 3 == _player2)
           {
-            _winner = "Player 2 Wins!";
+            if (_computer == false)
+            {
+                _winner = "Player 2 Wins!";
+            }
+            else
+            {
+                _winner = "Computer Wins!";
+            }
           }
           else
           {
