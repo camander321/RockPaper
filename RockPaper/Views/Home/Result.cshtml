@@ -2,17 +2,38 @@
   Layout = "_Layout";
 }
 <div class="well">
-  <div id="test">
-    <img id='finish-him' src='../img/finishhim.gif' alt='finish him'>
-  </div>
   @{
     var player1 = "../img/" + @Model.GetPlayer1() + ".png";
     var player2 = "../img/" + @Model.GetPlayer2() + ".png";
   }
 
-  <img id='player1-img' src='@player1' alt='finish him'>
-  <img id='player2-img' src='@player2' alt='finish him'>
+  <div id="player1">
+    @if((@Model.GetWinner() == "Player 2 Wins!") || (@Model.GetWinner() == "Draw!"))
+    {
+      <img class='player1-img loser' src='@player1' alt='finish him'>
+      <img class='player1-img splode' src='../img/splode.gif' alt='finish him'>
 
+    }
+    else
+    {
+      <img class='player1-img' src='@player1' alt='finish him'>
+    }
+
+  </div>
+  <div id="player2">
+    @if((@Model.GetWinner() == "Player 1 Wins!") || (@Model.GetWinner() == "Draw!"))
+    {
+      <img class='player2-img loser' src='@player2' alt='finish him'>
+      <img class='player2-img splode' src='../img/splode.gif' alt='finish him'>
+    }
+    else{
+      <img class='player2-img' src='@player2' alt='finish him'>
+    }
+  </div>
+
+  <div id="test">
+    <img id='finish-him' src='../img/finishhim.gif' alt='finish him'>
+  </div>
   <h2>@Model.GetWinner()</h2>
 
   <br>

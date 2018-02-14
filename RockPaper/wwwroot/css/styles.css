@@ -15,7 +15,7 @@ body {
   border-width: 0px;
 }
 
-#player1-img {
+.player1-img {
   width: 349px;
   height: auto;
   position: fixed;
@@ -23,7 +23,7 @@ body {
   top: 350px;
 }
 
-#player2-img {
+.player2-img {
   width: 349px;
   height: auto;
   position: fixed;
@@ -36,4 +36,11 @@ body {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+
+#finish-him {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  margin-left: -175px;
 }
